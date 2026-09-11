@@ -1,20 +1,21 @@
 # Alan Yingcheng Zhu — Portfolio
 
-Static GitHub Pages portfolio designed around visual judgment, AI creative direction, and production review.
+Multi-page GitHub Pages portfolio built for fast recruiter scanning with dedicated project case studies.
 
-## Publish on GitHub Pages
+## Structure
 
-1. Use a public repository named `<your-username>.github.io` for a root personal site.
-2. Place `index.html`, `styles.css`, `script.js`, `README.md`, and `assets/` at the repository root.
-3. In GitHub: **Settings → Pages → Deploy from a branch → main → / (root)**.
+- `index.html` — concise portfolio homepage
+- `work/lina/` — LINA case study
+- `work/when-the-moon-hides-crown/` — When the Moon Hides Crown case study
+- `work/a-dogs-way-home/` — A Dog's Way Home case study
+- `assets/` — self-hosted visual and video assets + résumé PDF
+- `styles.css` — shared visual system
+- `script.js` — shared interactions
 
-## Files
+## GitHub Pages
 
-- `index.html` — portfolio content and structure
-- `styles.css` — responsive visual system and interactions
-- `script.js` — reveal motion, comparison scrubber, lightbox, metrics, mobile navigation
-- `assets/` — self-hosted images, video clips, ranking evidence, and downloadable résumé
+Upload the **contents of this folder** to the repository root so `index.html` sits at the top level. For a project repository named `portfolio`, the site path will be:
 
-## LinkedIn
+`https://<username>.github.io/portfolio/`
 
-The site does not currently include a LinkedIn CTA because the exact public profile URL was not provided. Add your verified profile URL before publishing if desired.
+All internal case-study links use relative paths and will work under that project path.
