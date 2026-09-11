@@ -138,3 +138,23 @@ if (evidenceDialog) {
     if (e.target === evidenceDialog) evidenceDialog.close();
   });
 }
+
+// Compact navigation for tablet and mobile.
+const menuToggle = document.querySelector('.menu-toggle');
+const primaryNav = document.getElementById('primary-nav');
+if (menuToggle && primaryNav) {
+  const closeNav = () => {
+    document.body.classList.remove('nav-open');
+    menuToggle.setAttribute('aria-expanded', 'false');
+    menuToggle.setAttribute('aria-label', 'Open navigation');
+  };
+  menuToggle.addEventListener('click', () => {
+    const open = !document.body.classList.contains('nav-open');
+    document.body.classList.toggle('nav-open', open);
+    menuToggle.setAttribute('aria-expanded', String(open));
+    menuToggle.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
+  });
+  primaryNav.querySelectorAll('a').forEach(link => link.addEventListener('click', closeNav));
+  window.addEventListener('keydown', e => { if (e.key === 'Escape') closeNav(); });
+  window.addEventListener('resize', () => { if (window.innerWidth > 980) closeNav(); });
+}
